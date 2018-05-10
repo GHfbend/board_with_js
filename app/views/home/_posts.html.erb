@@ -1,0 +1,9 @@
+<li id="post-<%=post.id%>">
+    <strong># 익명 <%=post.id%>번째 게시물</strong>
+    // <%= post.created_at.getlocal("+09:00").strftime("%Y.%m.%d %p %I:%M")%>
+    // <%= link_to "삭제", "/home/destroy/#{post.id}",
+                            method: :get,
+                            remote: true,
+                            data: {confirm: "정말로 삭제하시겠습니까?"} %><br>
+    <%=post.content%>
+<br><br></li>

@@ -1,0 +1,15 @@
+<h1>익명 게시판</h1>
+
+<%= form_for :post, :url => home_create_path, remote: true do |f| %>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+<%end%>
+
+--------------------------------------------------------------------------------
+
+<h1>게시글</h1>
+<p><ul id = "posts">
+    <% @posts.each do |post| %>
+        <%= render partial: "home/posts", locals: {post: post} %>
+    <%end%>
+</ul></p>

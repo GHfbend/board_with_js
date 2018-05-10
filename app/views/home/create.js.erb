@@ -1,0 +1,5 @@
+(function($){
+    $("#post_content").val("")
+    var html = "<%= escape_javascript(render(partial: 'home/posts', locals: {post: @post}))%>";
+    $("#posts").append(html);
+})(jQuery)
